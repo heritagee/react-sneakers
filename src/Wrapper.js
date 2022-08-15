@@ -1,6 +1,6 @@
-import Card from './components/Card';
-import Header from './components/Header';
-import Drawer from './components/Drawer';
+import Card from './components/Card'; // Карточка товара
+import Header from './components/Header'; // Шапка
+import Drawer from './components/Drawer'; // Модалка корзина
 
 function Wrapper() {
   return (
