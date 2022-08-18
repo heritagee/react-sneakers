@@ -13,7 +13,7 @@ button, input {
 }
 .wrapper {
   background: #FFFFFF;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
   border-radius: 20px;
   max-width: 1080px;
   padding: 45px;
@@ -45,7 +45,7 @@ header {
 }
 
 h1 {
-  margin: 0;
+
   margin-bottom: 40px;
 }
 
@@ -70,12 +70,54 @@ h3, p {
   justify-content: space-between;
 }
 
+.card {
+  border: 1px solid #f8e8f8;
+  padding: 30px;
+  width: 180px;
+  border-radius: 40px;
+  margin-right: 30px;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card:hover {
+  box-shadow: 0 14px 30px rgba(0,0,0,0.05);
+  transform:  translateY(-5px);
+}
+
+.card p {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.imgBottom {
+  margin-top: 15px;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.cardBottom {
+  margin-top: 15px;
+}
+.favorite {
+  position: absolute;
+  cursor: pointer;
+}
+
 .align-center {
   align-items: center;
 }
 
-.
-.search-block {
+
+.search-bb {
   border: 1px solid #f2f2f2;
   display: flex;
   border-radius: 10px;
@@ -94,6 +136,7 @@ h3, p {
   padding: 13px;
   font-size: 16px;
   width: 200px;
+  outline: none;
 }
 
 .favorite {
@@ -119,13 +162,13 @@ h3, p {
   width: 400px;
   background-color: #fff;
   right: 0;
-  height: 866px;
+  height: 867px;
   padding: 30px;
   box-shadow: -10px 4px 24px rgba(0,0,0,0.1);
 }
 
 .drawer h2 {
-  margin: 0;
+
   margin-bottom: 30px;
   font-size: 24px;
 }
@@ -148,7 +191,7 @@ h3, p {
 .cart-item p {
   margin-bottom: 5px;
   font-size: 14px;
-  margin: 0;
+
 }
 
 .cart-item b {

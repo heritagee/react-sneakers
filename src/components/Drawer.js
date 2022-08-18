@@ -1,36 +1,34 @@
-function Drawer() {
+function Drawer({onClose, items = []}) {
+
     return(
-        <div style={{display: 'none'}} className="overlay">
+        <div className="overlay">
 
         <div className="drawer">
 
           <div className="cart-items">
           <h2 className="d-flex justify-between ">Корзина
-          <img className="cart-remove cu-p" src="/img/btn-remove.svg" alt="sneakerRemove" />
+          <img onClick={onClose} className="cart-remove cu-p" src="/img/btn-remove.svg" alt="sneakerRemove" />
           </h2>
-            <div className="cart-item">
-                <div style={{ backgroundImage: 'url(/img/sneaker.png'}} className="cartitemimg">
-                
-                </div>
-                <div className="cart-mr">
-                  <p>Мужские Кроссовки Nike Blazer Mid Suede</p>
-                  <b>8 499 руб.</b>
-                </div>
-                <img className="cart-remove" src="/img/btn-remove.svg" alt="sneakerRemove" />
-              </div>
 
-              <div className="cart-item">
-                <div style={{ backgroundImage: 'url(/img/sneaker.png'}} className="cartitemimg">
-                
-                </div>
-                <div className="cart-mr">
-                  <p>Мужские Кроссовки Nike Blazer Mid Suede</p>
-                  <b>8 499 руб.</b>
-                </div>
-                <img className="cart-remove" src="/img/btn-remove.svg" alt="sneakerRemove" />
-              </div>
+              {items.map((obj) => (
+                  <div className="cart-item">
+                      <div style={{ backgroundImage: `url(${obj.imageUrl})`  }} className="cartitemimg">
+
+                      </div>
+                      <div className="cart-mr">
+                          <p>{obj.title}</p>
+                          <b>{obj.price} руб.</b>
+                      </div>
+                      <img className="cart-remove" src="/img/btn-remove.svg" alt="sneakerRemove" />
+                  </div>
+              ))}
+
+
+
+
 
           </div>
+
           <div className="cart-bottom">
             <ul className="cartblock">
 
